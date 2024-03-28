@@ -1,0 +1,12 @@
+.app-display {
+  display: grid;
+  // height: 99vh;
+  gap: 1rem;
+  place-items: center;
+}
+
+.dark {
+  .app-display {
+    color: white;
+  }
+}
