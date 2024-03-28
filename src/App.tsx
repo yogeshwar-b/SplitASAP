@@ -1,11 +1,15 @@
-import "../scss/app.scss"
-import ModeRadio from "./components/ModeRadio"
+import '../scss/app.scss'
+import { ModeRadio } from './components/ModeRadio'
+import { useState } from 'react'
 
 function App() {
+  const [modeState, changeModeState] = useState(0)
   return (
-    <div className="app-display">
+    <div className='app-display'>
       Split ASAP
-      <ModeRadio></ModeRadio>
+      <ModeRadio
+        RadioStates={{ state: modeState, changestate: changeModeState }}
+      ></ModeRadio>
     </div>
   )
 }

@@ -1,0 +1,22 @@
+.radio-basic {
+  display: none;
+}
+.tab-list {
+  list-style: none;
+  padding: 0;
+}
+
+.elegant {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.radio-basic:checked + label {
+  background-color: rgb(8, 194, 27);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}

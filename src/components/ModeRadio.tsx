@@ -1,20 +1,17 @@
-const ModeRadio = () => {
+import { TextRadio } from './TextRadio'
+
+interface props {
+  RadioStates: {
+    state: number
+    changestate: React.Dispatch<React.SetStateAction<number>>
+  }
+}
+
+export const ModeRadio = (props: props) => {
   return (
     <div>
-      <label>
-        <input type="radio" name="mode" id="mode" />
-        Equally
-      </label>
-      <label>
-        <input type="radio" name="mode" id="mode" />
-        Shares
-      </label>
-      <label>
-        <input type="radio" name="mode" id="mode" />
-        Custom
-      </label>
+      <div>{props.RadioStates.state}</div>
+      <TextRadio items={['Equally', 'Shares', 'Custom']}></TextRadio>
     </div>
   )
 }
-
-export default ModeRadio
